@@ -183,23 +183,35 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 
 
 <input type="button" value="d0-send-1" onClick="{
-    sendToSpark('d0-send-1')
+    sendToSpark('clockwise')
 }">
 
 
 
 <input type="button" value="d0-send-0" onClick="{
-    sendToSpark('d0-send-0')
+    sendToSpark('counterclockwise')
 }">
 
 
 
 
-<input type="button" value="a1-read" onClick="{
-    sendToSpark('a1-read')
+<input type="button" value="a0-send-0" onClick="{
+    sendToSpark('stop')
 }"><br>
-
-
+<input type="button" value="a0-send-100" onClick="{
+    sendToSpark('slow?')                                               
+}"><br>
+   
+   <input type="button" value="a0-send-200" onClick="{
+    sendToSpark('mediumish')
+}"><br>
+   
+   
+   
+   
+<input type="button" value="a0-send-255" onClick="{
+    sendToSpark('fast')
+}"><br>
 
     
 Note: PWM only on A4, A5 presently<br>
