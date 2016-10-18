@@ -1,0 +1,69 @@
+void setup() {
+    pinMode(D7, OUTPUT);
+}
+
+void loop() {
+  
+
+
+
+myOwn(20, ,200, 1000);                                             // delay Fast slow
+
+delay(5000);
+}
+
+
+
+
+
+
+
+
+
+
+
+void myOwn(int myWait, int myFast, int mySlow){
+   
+   digitalWrite(D7,1);
+    delay(myfast);
+    digitalWrite(D7,0);
+    delay(myWait); 
+    digitalWrite(D7,1);
+    delay(myfast);
+    digitalWrite(D7,0);                                             //means s
+    delay(myWait);
+    digitalWrite(D7,1);
+    delay(myFast);
+    digitalWrite(D7,0);
+    delay(myWait);
+    
+    digitalWrite(D7,1);
+    delay(1000);
+    digitalWrite(D7,0);
+    delay(myWait);
+    digitalWrite(D7,1);
+    delay(1000);
+    digitalWrite(D7,0);                                             //means o
+    delay(myWait);
+    digitalWrite(D7,1);
+    delay(1000);
+    digitalWrite(D7,0);
+    delay(myWait);
+    
+    digitalWrite(D7,1);
+    delay(200);
+    digitalWrite(D7,0);
+    delay(200); 
+    digitalWrite(D7,1);
+    delay(200);                                                     //means s
+    digitalWrite(D7,0);
+    delay(200);
+    digitalWrite(D7,1);
+    delay(200);
+    digitalWrite(D7,0);
+    delay(200);
+    
+    
+    delay(myWait);  
+    
+}
