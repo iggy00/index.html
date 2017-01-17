@@ -192,59 +192,102 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 }"><br>
 
 
+	
+	
+<input type="button" value="a4-send-0" onClick="{
+    sendToSpark('a4-send-0')
+}">
+	
+	
 
-
+<input type="button" value="a4-send-45"onClick="{
+    sendToSpark('a4-send-45')
+}"><br>
+	
+	
+	
 <input type="button" value="a4-send-90" onClick="{
     sendToSpark('a4-send-90')
 }">
-<input type="button" value="a4-send--90" onClick="{
+<input type="button" value="a4-send-(-90)" onClick="{
     sendToSpark('a4-send--90')
 }">
 
-
+	
+	
+	
+<input type="button" value="a4-send-(-180)"onClick="{
+    sendToSpark('a4-send--180')
+}">	
 <input type="button" value="a4-send-180"onClick="{
     sendToSpark('a4-send-180')
 }">
+	
+	
 <input type="button" value="a4-send-255"onClick="{
     sendToSpark('a4-send-255')
 }">
 
-
-<input type="button" value="a5-send--90"onClick="{
-    sendToSpark('a5-send--90')
+	
+<input type="button" value="a5-send-0"onClick="{
+    sendToSpark('a5-send-0')
 }"><br>
 
-    
+	
+	
+<input type="button" value="a5-send-45"onClick="{
+    sendToSpark('a5-send-45')
+}"><br>
+	
+	
+	
 <input type="button" value="a5-send-90"onClick="{
     sendToSpark('a5-send-90')
 }"><br>
+<input type="button" value="a5-send-(-90)"onClick="{
+    sendToSpark('a5-send--90')
+}"><br>
 
+	
+	
 
 <input type="button" value="a5-send-180"onClick="{
     sendToSpark('a5-send-180')
 }"><br>
+<input type="button" value="a5-send-(-180)"onClick="{
+    sendToSpark('a5-send--180')
+}"><br>
 
-
+	
+	
 <input type="button" value="a5-send-255"onClick="{
     sendToSpark('a5-send-255')
 }"><br>
 
-   
+<input type="button" value="a4-send-180"onClick="{
+    sendToSpark('a4-serv-180')
+}">
    
    
    
    
 <br><br>
-  <div data-role="main" class="ui-content">
-    <form method="post" action="demoform.asp">
-      <label for="tilt">tilt:</label>
-      <input type="range" name="tilt" id="tilt" value="90" min="0" max="180" data-popup-enabled="true">
-     </form>
-   </div>
-<form method="post" action="demoform.asp">
+  
+  <label for="tilt">tilt:</label>
+  <input type="range" name="tilt"  value="90" min="0" max="180" data-popup-enabled="true">
+    
+
   <label for="pan">Pan:</label>
-  <input type="range" name="pan" id="pan" value="90" min="0" max="180" data-show-value="true"data-popup-enabled="true">
-</form>
+  <input type="range" name="pan"  value="90" min="0" list="myData"max="180" onChange="setValue(this)">
+ <datalist id="myData">
+       <option value="0">
+       <option value="45">
+       <option value="60">
+       <option value="90">
+       <option value="120">
+       <option value="150">
+       <option value="180">
+    </datalist>
 
 
 
@@ -256,7 +299,7 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <body>
     <P>Set Servo Position:<br><br>
-    <input type="range" name="degBox" id="degBoxId" min="0" max="180" step="1" value="90" list="myData" onchange="setValue(this)">
+    <input type="range" name="degBox" id="degBoxId" min="0" max="180" step="1" value="90"  onchange="setValue(this)">
     <!-- This adds the tick marks to the range but does not in Safari -->
     <datalist id="myData">
        <option value="0">
