@@ -117,59 +117,6 @@ function sendToSpark(myIn){
 
 
 
-</head>
-
-<body onload="{
-   myStorage1 = localStorage.getItem('myStoredText1')
-   if(myStorage1  != null){     
-      document.getElementById('myToken').value = myStorage1 
-    }   
-    myStorage2 = localStorage.getItem('myStoredText2')
-    if(myStorage2  != null){
-       document.getElementById('myDeviceId').value = myStorage2      
-    }
-          
-}">
-
-  
-
-
-
-
-
-
-
-<h2 align=center>Iggys Final project<br> Phone mount </h2>
-
-
-
-Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
-
-
-<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
-
-<form name="myForm" method="POST" id="myCoolForm" ><br>
-
-<input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
-
-Access Token:<input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
-<br><br>
-
-
-
-
-</form>
-
-
-
-<input type="button" value="store id and token" onClick="{
-   localStorage.setItem('myStoredText1', document.all.myToken.value)   
-   localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
-   alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
-}">
-<br><br>
-
-
 
 
 
@@ -332,8 +279,7 @@ Photon	FLEX SERVO Flash
       }
 
     </script>
-</body>
-</html>
+
           
           
           
@@ -345,9 +291,7 @@ Photon	FLEX SERVO Flash
         $.post( requestURL, { params: newValue, access_token: accessToken });
       }
 
-    </script>
-</body>
-   </html>
+
    
    
    
@@ -356,7 +300,58 @@ Photon	FLEX SERVO Flash
    
    
    
-   
+
+
+
+<body onload="{
+   myStorage1 = localStorage.getItem('myStoredText1')
+   if(myStorage1  != null){     
+      document.getElementById('myToken').value = myStorage1 
+    }   
+    myStorage2 = localStorage.getItem('myStoredText2')
+    if(myStorage2  != null){
+       document.getElementById('myDeviceId').value = myStorage2      
+    }
+          
+}">
+
+  
+
+
+
+
+
+
+
+<h2 align=center>Iggys Final project<br> Phone mount </h2>
+
+
+
+Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
+
+
+<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
+
+<form name="myForm" method="POST" id="myCoolForm" ><br>
+
+<input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
+
+Access Token:<input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
+
+
+
+
+</form>
+
+
+
+<input type="button" value="store id and token" onClick="{
+   localStorage.setItem('myStoredText1', document.all.myToken.value)   
+   localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
+   alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
+}">
+
+
    
    
    
