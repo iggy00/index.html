@@ -312,47 +312,23 @@ A5 (tilt)
     <script type="text/javascript">
       var deviceID    = "<< 310027000447343337373738 >>";
       var accessToken = "<< bb2dddc5ab7cc36ce97d1199d99156e782c9942f >>";
-      var setFunc = "setpos";
-      var getFunc = "getpos";
-
-      window.setInterval(function() {
-        requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + getFunc + "/?access_token=" + accessToken;
-        $.getJSON(requestURL, function(json) {
-                 document.getElementById("curPos").innerHTML = json.result + "&deg;";
-                 document.getElementById("curPos").style.fontSize = "28px";
-                 document.getElementById("degBoxId").value = parseInt(json.result);
-                 });
-      }, 1000);
-
-      function setValue(obj) {
-        var newValue = document.getElementById('degBoxId').value;
-        sparkSetPos(newValue);
-      }
-      
-      function fineAdjust(value) {
-        var currentValue = parseInt(document.getElementById('curPos').innerHTML);
-        var setValue = value + currentValue;
-        sparkSetPos(setValue);
-        document.getElementById("degBoxId").value = setValue;
-      }
-
-      function sparkSetPos(newValue) {
-	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/" + setFunc + "/";
-        $.post( requestURL, { params: newValue, access_token: accessToken });
-      }
-
-    </script>
-
-          
-          
-          
-          
-          
-          
-          sparkSetPos(newValue) {
-	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/" + setFunc + "/";
-        $.post( requestURL, { params: newValue, access_token: accessToken });
-      }
+	    
+	    
+<h1>Photon servo control</h1>
+    <input type="range" min="0" max="180" value="0" onchange="showValue(this.value)"/>
+    <span id="range">0</span>
+    <script type="text/javascript">
+    function showValue(newValue) {
+      document.getElementById("range").innerHTML=newValue;
+      var request = new XMLHttpRequest();
+      var dev_id = '<your device id here>';
+      var access = '<your access token here>';
+      var data = 'params='+newValue+'&access_token='+access;
+      var url = 'https://api.particle.io/v1/devices/'+dev_id+'/setpos/';
+      request.open('POST', url, true);
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.send(data);
+    }
 
 
    
