@@ -1,6 +1,6 @@
 <html>
 <head>
-<h5 align=center>Iggys Final project<br> Phone mount </h5>
+<h1 align=center>Iggys Final project<br> Phone mount </h1>
 
 
 <title>Iggys Final Project Test </title>
@@ -122,7 +122,7 @@ function sendToSpark(myIn){
 
 
 
-<h1 align=center>
+<h2 align=center>
 
 <input type="button" value="D7 on" onClick="{
     sendToSpark('d7-send-1')
@@ -237,22 +237,11 @@ Access Token:<input id="myToken" name="access_token" type=password size=20 place
    localStorage.setItem('myStoredText1', document.all.myToken.value)   
    localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
    alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
-}">
+}"><br>
 
 
    
-   
-   
-   
-
-
-
-
-<input type=button id="myToVolts" value="Convert Sensor reading into Volts" onclick="{
-  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
-  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
-}">
-: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
+ <h1 align=center>slider control </h1>
 
 	
 	
