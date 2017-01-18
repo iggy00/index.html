@@ -1,6 +1,6 @@
 <html>
 <head>
-<h2 align=center>Iggys Final project<br> Phone mount </h2>
+<h5 align=center>Iggys Final project<br> Phone mount </h5>
 
 
 <title>Iggys Final Project Test </title>
@@ -132,7 +132,7 @@ function sendToSpark(myIn){
 }"><br>
 
 
-AJAX flash
+AJAX flash<br>
 	
 <input type="button" value="a4-send-0" onClick="{
     sendToSpark('a4-send-0')
@@ -145,7 +145,7 @@ AJAX flash
 }">
 <input type="button" value="a4-send-180"onClick="{
     sendToSpark('a4-send-180')
-}">
+}"><br>
 	
 	
 	
@@ -165,7 +165,7 @@ AJAX flash
 }"><br>
 
 
-Photon	FLEX SERVO Flash
+Photon	FLEX SERVO Flash<br>
 	
 
 <input type="button" value="a4-180"onClick="{
@@ -204,6 +204,68 @@ Photon	FLEX SERVO Flash
 }">
 <br><br>
   
+	
+	
+	
+<div width="400" height="200" name="myDivName" id="myDivId"> output here </div><br>
+
+	
+	
+	
+	
+	
+	
+Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
+
+
+<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
+
+<form name="myForm" method="POST" id="myCoolForm" ><br>
+
+<input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
+
+Access Token:<input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
+
+
+
+
+</form>
+
+
+
+<input type="button" value="store id and token" onClick="{
+   localStorage.setItem('myStoredText1', document.all.myToken.value)   
+   localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
+   alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
+}">
+
+
+   
+   
+   
+   
+
+
+
+
+<input type=button id="myToVolts" value="Convert Sensor reading into Volts" onclick="{
+  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
+  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
+}">
+: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   <label for="tilt">tilt:</label>
   <input type="range" name="tilt"  value="90" min="0" max="180" data-popup-enabled="true">
     
@@ -222,6 +284,16 @@ Photon	FLEX SERVO Flash
 
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
    
    
    
@@ -327,45 +399,6 @@ Photon	FLEX SERVO Flash
 
 
 
-Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
-
-
-<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
-
-<form name="myForm" method="POST" id="myCoolForm" ><br>
-
-<input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
-
-Access Token:<input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
-
-
-
-
-</form>
-
-
-
-<input type="button" value="store id and token" onClick="{
-   localStorage.setItem('myStoredText1', document.all.myToken.value)   
-   localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
-   alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
-}">
-
-
-   
-   
-   
-   
-
-<div width="400" height="200" name="myDivName" id="myDivId"> output here </div><br>
-
-
-
-<input type=button id="myToVolts" value="Convert Sensor reading into Volts" onclick="{
-  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
-  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
-}">
-: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
 
 
 
