@@ -132,7 +132,7 @@ function sendToSpark(myIn){
 }"><br>
 
 
-<h3 align=center> AJAX flash</h3> <br>
+<h3 align=center> AJAX flash <br>
 	
 <input type="button" value="a4-send-0" onClick="{
     sendToSpark('a4-send-0')
@@ -162,10 +162,10 @@ function sendToSpark(myIn){
 
 <input type="button" value="a5-send-180"onClick="{
     sendToSpark('a5-send-180')
-}"><br>
+}"></h3><br>
 
 
-<h3 align=center> Photon	FLEX SERVO Flash </h3> <br>
+<h3 align=center> Photon	FLEX SERVO Flash <br>
 	
 
 <input type="button" value="a4-180"onClick="{
@@ -201,7 +201,7 @@ function sendToSpark(myIn){
 }">
 <input type="button" value="a5-(-180)"onClick="{
     sendToSpark('a5-ser5--180')
-}">
+}"></h3> 
 <br><br>
   
 	
@@ -215,16 +215,16 @@ function sendToSpark(myIn){
 	
 	
 	
-	<h2 align=center> Device ID:</h2><input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
+	<h2 align=center> Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
 
 
-<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
+<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > </h2>
 
 <form name="myForm" method="POST" id="myCoolForm" ><br>
 
 <input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
 
-<h2 align=center> Access Token:</h2> <input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
+ Access Token: <input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
 
 
 
@@ -237,11 +237,11 @@ function sendToSpark(myIn){
    localStorage.setItem('myStoredText1', document.all.myToken.value)   
    localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
    alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
-}"><br>
+}"></h2><br>
 
 
    
- <h1 align=center>slider control 
+ <h3 align=center>slider control 
 
 	
 	
@@ -272,7 +272,7 @@ function sendToSpark(myIn){
     </datalist>
 
 
-</h1>
+</h3>
 	
 	
 	
