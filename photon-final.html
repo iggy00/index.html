@@ -167,34 +167,36 @@ function sendToSpark(myIn){
 
 <h3 align=center> Photon	FLEX SERVO Flash <br>
 	
-
+A4 (PAN)
+	
+<input type="button" value="a4-0"onClick="{
+    sendToSpark('a4-serv-0')
+}">	
+<input type="button" value="a4-45"onClick="{
+    sendToSpark('a4-serv-45')
+}">
+<input type="button" value="a4-90"onClick="{
+    sendToSpark('a4-serv-90')
+}">	
 <input type="button" value="a4-180"onClick="{
     sendToSpark('a4-serv-180')
 }">   
 <input type="button" value="a4-(-180)"onClick="{
     sendToSpark('a4-serv--180')
 }">	
-<input type="button" value="a4-180"onClick="{
-    sendToSpark('a4-serv-180')
-}">
-<input type="button" value="a4-90"onClick="{
-    sendToSpark('a4-serv-90')
-}">	
-<input type="button" value="a4-0"onClick="{
-    sendToSpark('a4-serv-0')
-}">	
-<input type="button" value="a4-45"onClick="{
-    sendToSpark('a4-serv-45')
-}"><br>
-	
+
 
 	
-	
+<br>
+A5 (tilt)	
+<input type="button" value="a5-0"onClick="{
+    sendToSpark('a4-ser5-0')
+}">		
+<input type="button" value="a5-45"onClick="{
+    sendToSpark('a5-ser5-45')
+}">
 <input type="button" value="a5-90"onClick="{
     sendToSpark('a5-ser5-90')
-}">
-<input type="button" value="a5-(-90)"onClick="{
-    sendToSpark('a5-ser5--90')
 }">
 <input type="button" value="a5-180"onClick="{
     sendToSpark('a5-ser5-180')
@@ -247,14 +249,22 @@ function sendToSpark(myIn){
 	
 	
   <label for="tilt">tilt:</label>
-  <input type="range" name="tilt"  value="90" min="0" max="180" data-popup-enabled="true">
-    
+  <input type="range" name="tilt"  value="90" min="0" list="myData2"max="180" data-popup-enabled="true">
+    <datalist id="myData2">
+       <option value="0">
+       <option value="30">
+       <option value="60">
+       <option value="90">
+       <option value="120">
+       <option value="150">
+       <option value="180">
+    </datalist>
 
   <label for="pan">Pan:</label>
   <input type="range" name="pan"  value="90" min="0" list="myData"max="180" onChange="setValue(this)">
  <datalist id="myData">
        <option value="0">
-       <option value="45">
+       <option value="30">
        <option value="60">
        <option value="90">
        <option value="120">
