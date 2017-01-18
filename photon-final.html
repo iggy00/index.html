@@ -139,21 +139,21 @@ function sendToSpark(myIn){
 
 
 
-<h2 align=center>Simplist Ajax Web Page for the Particle.io Photon<br> (formerly the Spark.io Core) </h2>
+<h2 align=center>Iggys Final project<br> Phone mount </h2>
 
 
 
-Device ID:<input id="myDeviceId" name="myCoreID" type=password size=50 placeholder="78dd12345678123456"> <br>
-Get this from the core area when logged in<br>
+Device ID:<input id="myDeviceId" name="myCoreID" type=password size=20 placeholder="78dd12345678123456"> <br>
 
-<input id="myFunctionName" name="myFunction"  type=hidden size=50 value="my-main" > 
+
+<input id="myFunctionName" name="myFunction"  type=hidden size=20 value="my-main" > 
 
 <form name="myForm" method="POST" id="myCoolForm" ><br>
 
-<input id="myParameter" name="params" type=text  style="display:none"     size=50 placeholder="d7-send-high"> 
+<input id="myParameter" name="params" type=text  style="display:none"     size=20 placeholder="d7-send-high"> 
 
-Access Token:<input id="myToken" name="access_token" type=password size=50 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
-Get this from the settings area when logged into <a href="http://particle.io/build">http://particle.io/build</a><br><br>
+Access Token:<input id="myToken" name="access_token" type=password size=20 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
+<br><br>
 
 
 
@@ -162,17 +162,11 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 
 
 
-<input type="button" value="Store the Photon's Token and ID locally!" onClick="{
+<input type="button" value="store id and token" onClick="{
    localStorage.setItem('myStoredText1', document.all.myToken.value)   
    localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
    alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
 }">
-
-
-
-
-
-
 <br><br>
 
 
@@ -180,132 +174,84 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
 
 
 
+<h1 align=center>
 
 <input type="button" value="D7 on" onClick="{
     sendToSpark('d7-send-1')
 }">
-
-
-
 <input type="button" value="D7 off" onClick="{
     sendToSpark('d7-send-0')
 }"><br>
 
 
-	
+AJAX flash
 	
 <input type="button" value="a4-send-0" onClick="{
     sendToSpark('a4-send-0')
-}">
-	
-	
-
+}">	
 <input type="button" value="a4-send-45"onClick="{
     sendToSpark('a4-send-45')
 }">
-	
-	
-	
 <input type="button" value="a4-send-90" onClick="{
     sendToSpark('a4-send-90')
 }">
-<input type="button" value="a4-send-(-90)" onClick="{
-    sendToSpark('a4-send--90')
-}">
-
-	
-	
-	
-<input type="button" value="a4-send-(-180)"onClick="{
-    sendToSpark('a4-send--180')
-}">	
 <input type="button" value="a4-send-180"onClick="{
     sendToSpark('a4-send-180')
 }">
 	
 	
-<input type="button" value="a4-send-255"onClick="{
-    sendToSpark('a4-send-255')
-}"><br>
-
+	
 	
 <input type="button" value="a5-send-0"onClick="{
     sendToSpark('a5-send-0')
-}">
-
-	
-	
+}">	
 <input type="button" value="a5-send-45"onClick="{
     sendToSpark('a5-send-45')
-}">
-	
-	
-	
+}">	
 <input type="button" value="a5-send-90"onClick="{
     sendToSpark('a5-send-90')
-}">
-<input type="button" value="a5-send-(-90)"onClick="{
-    sendToSpark('a5-send--90')
-}">
-
-	
-	
+}">	
 
 <input type="button" value="a5-send-180"onClick="{
     sendToSpark('a5-send-180')
-}">
-<input type="button" value="a5-send-(-180)"onClick="{
-    sendToSpark('a5-send--180')
-}">
-
-	
-	
-<input type="button" value="a5-send-255"onClick="{
-    sendToSpark('a5-send-255')
-}">
-<input type="button" value="a4-send-180"onClick="{
-    sendToSpark('a4-serv-180')
 }"><br>
 
-FLEX SERVO   
-   
-<input type="button" value="a4-serv-(-180)"onClick="{
+
+Photon	FLEX SERVO Flash
+	
+
+<input type="button" value="a4-180"onClick="{
+    sendToSpark('a4-serv-180')
+}">   
+<input type="button" value="a4-(-180)"onClick="{
     sendToSpark('a4-serv--180')
 }">	
-<input type="button" value="a4-serv-180"onClick="{
+<input type="button" value="a4-180"onClick="{
     sendToSpark('a4-serv-180')
 }">
-<input type="button" value="a4-serv-90"onClick="{
+<input type="button" value="a4-90"onClick="{
     sendToSpark('a4-serv-90')
 }">	
-	
-<input type="button" value="a4-serv-255"onClick="{
-    sendToSpark('a4-serv-255')
-}">
-
-	
-<input type="button" value="a4-serv-0"onClick="{
+<input type="button" value="a4-0"onClick="{
     sendToSpark('a4-serv-0')
-}">
-
-	
-	
-<input type="button" value="a4-serv-45"onClick="{
+}">	
+<input type="button" value="a4-45"onClick="{
     sendToSpark('a4-serv-45')
 }"><br>
 	
 	
 	
-<input type="button" value="a5-ser5-90"onClick="{
+	
+<input type="button" value="a5-90"onClick="{
     sendToSpark('a5-ser5-90')
 }">
-<input type="button" value="a5-ser5-(-90)"onClick="{
+<input type="button" value="a5-(-90)"onClick="{
     sendToSpark('a5-ser5--90')
 }">
-<input type="button" value="a5-ser5-180"onClick="{
+<input type="button" value="a5-180"onClick="{
     sendToSpark('a5-ser5-180')
 }">
-<input type="button" value="a5-ser5-(-180)"onClick="{
+<input type="button" value="a5-(-180)"onClick="{
     sendToSpark('a5-ser5--180')
 }">
 <br><br>
